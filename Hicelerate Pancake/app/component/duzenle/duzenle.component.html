@@ -1,0 +1,47 @@
+<h1 mat-dialog-title>EDİT </h1>
+
+  <form #form="ngForm" >
+
+
+
+
+    <label>Kurs ID: </label>
+    <input readonly="readonly"  
+     class="form-control"
+    name="businessId" 
+    [(ngModel)]="services.formdata.businessId"  
+    #businessId="ngModel" >
+       
+   <br>
+   <label>Kurs Adı: </label>
+    <input readonly="readonly"  
+    class="form-control"
+   name="businessName" 
+   [(ngModel)]="services.formdata.businessName"  
+   #businessId="ngModel" >
+   <br>
+<label>Katılımcı Sayısı: </label>
+<input  
+class="form-control"
+name="katilimci" 
+[(ngModel)]="services.formdata.katilimci"  
+#katilimci="ngModel" >
+<br>
+<label>description: </label>
+<textarea class="form-control"
+
+
+name="description" 
+[(ngModel)]="services.formdata.description"  
+#description="ngModel" 
+ > </textarea>
+   <br>   
+</form>
+
+<div mat-dialog-actions >
+  <button mat-raised-button aria-flowto="center" type="submit" [disabled]="form.invalid" (click)="onNoClick()" 
+  >save</button>
+  <button mat-button  aria-flowto="center" type="submit" (click)="onNoClick()" 
+  >No Thanks</button>
+</div>
+
